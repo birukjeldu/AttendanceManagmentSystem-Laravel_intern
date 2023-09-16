@@ -44,7 +44,7 @@
                                                             <td>{{$employee->name}}</td>
                                                             <td>{{$employee->position}}</td>
                                                             <td>{{$employee->email}}</td>
-                                                            {{-- <td>
+                                                            <td>
                                                                 @if(isset($employee->schedules->first()->slug))
                                                                 {{$employee->schedules->first()->slug}}
                                                                 @endif
@@ -54,7 +54,7 @@
                         
                                                                 <a href="#edit{{$employee->name}}" data-toggle="modal" class="btn btn-success btn-sm edit btn-flat"><i class='fa fa-edit'></i></a>
                                                                 <a href="#delete{{$employee->name}}" data-toggle="modal" class="btn btn-danger btn-sm delete btn-flat"><i class='fa fa-trash'></i></a>
-                                                            </td> --}}
+                                                            </td>
                                                         </tr>
                                                         @endforeach
                                                    
