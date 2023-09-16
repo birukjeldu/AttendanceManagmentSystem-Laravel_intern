@@ -29,12 +29,6 @@ Route::group(['middleware' => ['auth', 'Role'], 'roles' => ['admin']], function 
     Route::get('/sheet-report', '\App\Http\Controllers\CheckController@sheetReport')->name('sheet-report');
     Route::post('check-store','\App\Http\Controllers\CheckController@CheckStore')->name('check_store');
     
-    // Fingerprint Devices
-    Route::resource('/finger_device', '\App\Http\Controllers\BiometricDeviceController');
-
-    Route::delete('finger_device/destroy', '\App\Http\Controllers\BiometricDeviceController@massDestroy')->name('finger_device.massDestroy');
-    Route::get('finger_device/{fingerDevice}/employees/add', '\App\Http\Controllers\BiometricDeviceController@addEmployee')->name('finger_device.add.employee');
-    Route::get('finger_device/{fingerDevice}/get/attendance', '\App\Http\Controllers\BiometricDeviceController@getAttendance')->name('finger_device.get.attendance');
     // Temp Clear Attendance route
     Route::get('finger_device/clear/attendance', function () {
         $midnight = \Carbon\Carbon::createFromTime(23, 50, 00);
@@ -57,19 +51,3 @@ Route::group(['middleware' => ['auth']], function () {
     
 
 });
-
-// Route::get('/attendance/assign', function () {
-//     return view('attendance_leave_login');
-// })->name('attendance.login');
-
-// Route::post('/attendance/assign', '\App\Http\Controllers\AttendanceController@assign')->name('attendance.assign');
-
-
-// Route::get('/leave/assign', function () {
-//     return view('attendance_leave_login');
-// })->name('leave.login');
-
-// Route::post('/leave/assign', '\App\Http\Controllers\LeaveController@assign')->name('leave.assign');
-
-
-// Route::get('{any}', 'App\http\controllers\VeltrixController@index');

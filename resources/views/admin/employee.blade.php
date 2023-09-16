@@ -6,12 +6,6 @@
 @section('breadcrumb')
 <div class="col-sm-6">
     <h4 class="page-title text-left">Employees</h4>
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
-        <li class="breadcrumb-item"><a href="javascript:void(0);">Employees</a></li>
-        <li class="breadcrumb-item"><a href="javascript:void(0);">Employees List</a></li>
-  
-    </ol>
 </div>
 @endsection
 @section('button')
@@ -50,7 +44,7 @@
                                                             <td>{{$employee->name}}</td>
                                                             <td>{{$employee->position}}</td>
                                                             <td>{{$employee->email}}</td>
-                                                            <td>
+                                                            {{-- <td>
                                                                 @if(isset($employee->schedules->first()->slug))
                                                                 {{$employee->schedules->first()->slug}}
                                                                 @endif
@@ -60,7 +54,7 @@
                         
                                                                 <a href="#edit{{$employee->name}}" data-toggle="modal" class="btn btn-success btn-sm edit btn-flat"><i class='fa fa-edit'></i></a>
                                                                 <a href="#delete{{$employee->name}}" data-toggle="modal" class="btn btn-danger btn-sm delete btn-flat"><i class='fa fa-trash'></i></a>
-                                                            </td>
+                                                            </td> --}}
                                                         </tr>
                                                         @endforeach
                                                    

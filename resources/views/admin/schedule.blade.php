@@ -9,11 +9,6 @@
 @section('breadcrumb')
     <div class="col-sm-6">
         <h4 class="page-title text-left">Schedules</h4>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
-            <li class="breadcrumb-item"><a href="javascript:void(0);">Schedule</a></li>
-
-        </ol>
     </div>
 @endsection
 @section('button')
